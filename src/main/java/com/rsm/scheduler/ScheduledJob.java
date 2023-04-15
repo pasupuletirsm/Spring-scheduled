@@ -1,6 +1,7 @@
 package com.rsm.scheduler;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,7 @@ public class ScheduledJob {
 		log.info("Excuted scheduledFixedRate every 5 seconds", new Date());
 	}
 	
-	@Scheduled(fixedDelayString  = "5000")
+	@Scheduled(fixedDelay  = 5, timeUnit = TimeUnit.SECONDS)
 	public void scheduledFixedDelay() throws InterruptedException {
 		log.info("Excuted scheduledFixedDelay every 5 seconds", new Date());
 	}
