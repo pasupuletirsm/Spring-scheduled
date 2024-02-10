@@ -23,7 +23,7 @@ public class AppConfig implements SchedulingConfigurer {
 
     @Bean(destroyMethod="shutdown")
     public Executor taskExecutor() {
-    	
+    	System.out.println("Added Print message");
         return Executors.newScheduledThreadPool(3);
     }
 }
