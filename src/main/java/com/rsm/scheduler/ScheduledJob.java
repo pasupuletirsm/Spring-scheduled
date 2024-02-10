@@ -14,7 +14,7 @@ public class ScheduledJob {
 
 	Logger log = LoggerFactory.getLogger(ScheduledJob.class);
 
-	@Scheduled(fixedRate = 6000)
+	@Scheduled(fixedRate = 5000)
 	public void scheduledFixedRate() {
 		log.info("Excuted scheduledFixedRate every 5 seconds {}", new Date());
 	}
